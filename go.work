@@ -1,0 +1,7 @@
+go 1.19
+
+use ./webapp
+
+use ./primeapp
+
+use ./anthonygg

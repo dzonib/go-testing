@@ -1,0 +1,36 @@
+{{template "base" .}} {{define "content"}} <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="m-3">Home page</h1>
+            <hr>
+            <!-- LOGIN -->
+            <form action="/login"
+                  method="post">
+                <div class="mb-3">
+                    <label for="email"
+                           class="form-label">Email</label>
+                    <input type="email"
+                           class="form-control"
+                           id="email"
+                           aria-describedby="email"
+                           name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password"
+                           class="form-label">Password</label>
+                    <input type="password"
+                           class="form-control"
+                           id="password"
+                           name="password">
+                </div>
+                <button type="submit"
+                        class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+            <!-- we passed a struct of date, so we use .IP -->
+            <small>Your request came from {{.IP}}</small>
+            <br>
+            <small>From Session: {{index .Data "test"}}</small>
+        </div>
+    </div>
+</div> {{end}}
